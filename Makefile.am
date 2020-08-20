@@ -37,6 +37,7 @@ endif
 
 examples_rnnoise_demo_SOURCES = examples/rnnoise_demo.c
 examples_rnnoise_demo_LDADD = librnnoise.la
+examples_rnnoise_demo_LDFLAGS = ${SNDFILE_LIBS} ${SOXR_LIBS}
 
 pkgconfigdir = $(libdir)/pkgconfig
 pkgconfig_DATA = rnnoise.pc

@@ -49,6 +49,9 @@ AC_SUBST(OP_LT_AGE)
 CC_CHECK_CFLAGS_APPEND(
   [-pedantic -Wall -Wextra -Wno-sign-compare -Wno-parentheses -Wno-long-long])
 
+PKG_CHECK_MODULES([SNDFILE], [sndfile])
+PKG_CHECK_MODULES([SOXR], [soxr])
+
 # Platform-specific tweaks
 case $host in
   *-mingw*)
